@@ -1,0 +1,30 @@
+# ===== Go build =====
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# ===== Go workspace =====
+go.work
+go.work.sum
+
+# ===== Debug binaries (VS Code) =====
+__debug_bin*
+.debug
+
+# ===== Dependency cache =====
+vendor/
+
+# ===== IDE =====
+.vscode/
+.idea/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
