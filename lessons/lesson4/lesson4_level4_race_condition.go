@@ -7,7 +7,7 @@ import (
 )
 
 //Mutex
-func level4_mutex() {
+func Level4_mutex() {
 	var counter int
 	var mu sync.Mutex
 	var wg sync.WaitGroup
@@ -27,7 +27,7 @@ func level4_mutex() {
 }
 
 //Atomic
-func level4_atomic() {
+func Level4_atomic() {
 	var counter int64
 	var wg sync.WaitGroup
 

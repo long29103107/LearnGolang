@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func level2_channelBasic() {
+func Level2_channelBasic() {
 	ch := make(chan int)
 
 	go func() {
@@ -18,21 +18,23 @@ func level2_channelBasic() {
 	for v := range ch {
 		fmt.Println(v)
 	}
+
+	fmt.Println("Press Enter to exit...")
 }
 
 
-func level2_fanOut() {
+func Level2_fanOut() {
 	ch := make(chan int)
 
 	for w := 1; w <= 3; w++ {
 		go func(worker int) {
 			for job := range ch {
-				fmt.Printf("Worker %d processed %d\n", worker, job*2)
+				fmt.Printf("Worker %d processed %d\n", worker, job)
 			}
 		}(w)
 	}
 
-	for i := 1; i <= 5; i++ {
+	for i := 1; i <= 10; i++ {
 		ch <- i
 	}
 	close(ch)

@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func level1_basicParallel() {
+func Level1_basicParallel() {
 	go func() {
 		for i := 0; i < 5; i++ {
 			fmt.Println("A")
@@ -33,7 +33,7 @@ func level1_basicParallel() {
 // 	time.Sleep(500 * time.Millisecond)
 // }
 
-func level1_loopFix() {
+func Level1_loopFix() {
 	for i := 0; i < 5; i++ {
 		go func(i int) {
 			fmt.Println(i)

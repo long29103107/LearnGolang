@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func level5_workerPool() {
+func Level5_workerPool() {
 	jobs := make(chan int, 10)
 	results := make(chan int, 10)
 

@@ -7,13 +7,14 @@ import (
 	"time"
 )	
 
-func level3_waitGroup() {
+func Level3_waitGroup() {
 	var wg sync.WaitGroup
 
 	for i := 1; i <= 5; i++ {
 		wg.Add(1)
 
 		go func(id int) {
+			//Busines here, final step is defer wg.Done()
 			defer wg.Done()
 			time.Sleep(time.Duration(rand.Intn(400)) * time.Millisecond)
 			fmt.Println("Done", id)

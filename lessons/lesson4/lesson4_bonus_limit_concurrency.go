@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func levelBonus_limitConcurrency() {
+func LevelBonus_limitConcurrency() {
 	sem := make(chan struct{}, 5) // max 5 concurrent
 	var wg sync.WaitGroup
 
@@ -18,7 +18,7 @@ func levelBonus_limitConcurrency() {
 
 			sem <- struct{}{} // acquire
 			fmt.Println("Start", id)
-			time.Sleep(500 * time.Millisecond)
+			time.Sleep(5000 * time.Millisecond)
 			fmt.Println("End", id)
 			<-sem // release
 		}(i)

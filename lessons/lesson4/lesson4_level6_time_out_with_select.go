@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-func level6_timeout() {
+func Level6_timeout() {
 	ch := make(chan string)
 
 	go func() {
